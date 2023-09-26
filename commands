@@ -1,0 +1,6 @@
+1. lein new app <prjname>
+2. lein help <keyword>
+3. lein run - run project
+4. lein uberjar - create standalone jar file 
+5. lein repl - open clojure repl
+
