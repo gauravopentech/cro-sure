@@ -35,3 +35,10 @@
 
 ; time the vampire search function
 (time (identify-vampire (range 0 1000000)))
+
+; identify humans
+(def not-vampire? (complement vampire?))
+(defn identify-humans
+  [social-security-numbers]
+  (filter not-vampire?
+          (map vampire-related-details social-security-numbers)))

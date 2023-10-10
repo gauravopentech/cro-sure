@@ -1,4 +1,5 @@
-(ns clj-noobs.hobbit-killer)
+(ns clj-noobs.hobbit-killer
+  (:require clojure.string))
 
 (def asym-hobbit-body-parts
   [{:name "head" :size 3}

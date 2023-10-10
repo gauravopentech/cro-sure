@@ -1,7 +1,12 @@
 (ns clj-noobs.core
-  (:gen-class))
+  (:gen-class)
+  (:require [clj-noobs.vampire-hunter :as vh]))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "Calling Vampire hunter"
   [& args]
-  (println "Hello, World!"))
+
+  (println
+   (vh/unify)
+   (time (vh/vampire-related-details 0))
+   (time (def mapped-details (map vh/vampire-related-details (range 0 1000000))))))
