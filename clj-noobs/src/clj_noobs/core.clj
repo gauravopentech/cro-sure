@@ -1,12 +1,13 @@
 (ns clj-noobs.core
   (:gen-class)
-  (:require [clj-noobs.vampire-hunter :as vh]))
+  (:require [clj-noobs.vampire-hunter :as vh] [clj-noobs.fwpd.vamp-search :as vs]))
 
 (defn -main
   "Calling Vampire hunter"
   [& args]
 
   (println
-   (vh/unify)
-   (time (vh/vampire-related-details 0))
-   (time (def mapped-details (map vh/vampire-related-details (range 0 1000000))))))
+   ; (vh/unify)
+   (vs/vamp-suspects (vs/glitter-filter 3 (vs/mapify (vs/parse (slurp vs/filename)))))
+   ;(time (vh/vampire-related-details 0))
+   ))

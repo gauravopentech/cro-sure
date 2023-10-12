@@ -31,10 +31,10 @@
                  (map vampire-related-details social-security-numbers))))
 
 ; create a map of million people
-(time (def mapped-details (map vampire-related-details (range 0 1000000))))
+;(time (def mapped-details (map vampire-related-details (range 0 1000000))))
 
 ; time the vampire search function
-(time (identify-vampire (range 0 1000000)))
+;(time (identify-vampire (range 0 1000000)))
 
 ; identify humans
 (def not-vampire? (complement vampire?))
