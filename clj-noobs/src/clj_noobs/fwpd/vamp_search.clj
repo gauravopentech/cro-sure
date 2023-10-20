@@ -1,5 +1,6 @@
 (ns clj-noobs.fwpd.vamp-search
-  (:require [clojure.java.io :as io] [clojure.string :as string]))
+  (:require [clojure.java.io :as io]
+            [clojure.string :as string]))
 
 (def filename (io/resource
                "suspects.csv"))
